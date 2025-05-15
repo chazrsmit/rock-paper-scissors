@@ -2,13 +2,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5em;
-    margin: 0;
+    margin-top: 2em;
 }
 
 .triangle {
-    width: 20em;
-    height: 20em;
+    width: 24em;
+    height: 24em;
     border: 1em solid rgba(0, 0, 0, 0.229);
     transform: rotate(45deg);
     border-top: none;
@@ -21,9 +20,9 @@
     content: "";
     border-top: 1em solid rgba(0, 0, 0, 0.229);
     /* Théorème de Pythagore pour calculer la longueur de la diagonale de l'élément .triangle */
-    width: calc(1.41 * (20em + 0.1em)) ; 
+    width: calc(1.41 * (24em + 0.1em)) ; 
     transform: rotate(-45deg);
     margin: 0 !important;
-    bottom: 9em;
-    right: -5em;
+    bottom: 11em;
+    right: -6em;
 }
