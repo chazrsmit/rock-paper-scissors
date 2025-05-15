@@ -1,28 +1,83 @@
 .div-content {
+    align-items: center;
+    margin-top: 3em;
+    width: 90vw;
+    height: 100%;
+    /* background-image: url("../../../rock-paper-scissors-master/images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center center; */
+    justify-content: center;
+}
+
+.background {
+    background-image: url("../../../rock-paper-scissors-master/images/bg-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: center 66%;
+    background-size: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+}
+
+@media (min-width: 1024px) {
+    .div-content {
+        margin-top: 6em;
+        width: 50vw;
+        height: auto;
+    }
+}
+
+.btn-paper, .btn-scissors, .btn-rock {
+    width: 130px;
+    height: 130px;
+    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2em;
+    border-radius: 50%;
+    border-top: inset 7px rgba(255, 255, 255, 0.471);
 }
 
-.triangle {
-    width: 24em;
-    height: 24em;
-    border: 1em solid rgba(0, 0, 0, 0.229);
-    transform: rotate(45deg);
-    border-top: none;
-    border-left: none;
-    margin: 0;
+.wrap-paper {
+    background: linear-gradient(to top, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    width: 165px;
+    height: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border-bottom: outset 7px hsl(230, 89%, 65%);
 }
 
-.triangle::before {
-    position: absolute;
-    content: "";
-    border-top: 1em solid rgba(0, 0, 0, 0.229);
-    /* Théorème de Pythagore pour calculer la longueur de la diagonale de l'élément .triangle */
-    width: calc(1.41 * (24em + 0.1em)) ; 
-    transform: rotate(-45deg);
-    margin: 0 !important;
-    bottom: 11em;
-    right: -6em;
+.wrap-scissors {
+    background: linear-gradient(to top, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    width: 165px;
+    height: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border-bottom: outset 7px hsl(40, 84%, 53%);
+}
+
+.wrap-rock {
+    background: linear-gradient(to top, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    width: 165px;
+    height: 165px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border-bottom: outset 7px hsl(349, 70%, 56%);
+}
+
+.btn-paper img, .btn-scissors img {
+    width: 45%;
+    height: 55%;
+}
+
+.row-1 {
+    gap: 4vw;
 }
