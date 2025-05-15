@@ -1,0 +1,30 @@
+.div-fight {
+    width: 90vw;
+    display: flex;
+    gap: 30px;
+    margin-top: 4em;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 1024px) {
+    .div-fight {
+        width: 50vw;
+    }
+}
+
+.title-player-choice {
+    letter-spacing: 2.6px;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.wrap-paper.bis, .wrap-scissors.bis, .wrap-rock.bis {
+    height: 200px;
+    width: 200px;
+}
+
+.btn-paper.bis, .btn-scissors.bis, .btn-rock.bis {
+    height: 155px;
+    width: 155px;
+}

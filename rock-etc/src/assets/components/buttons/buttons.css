@@ -73,7 +73,7 @@
     border-bottom: outset 7px hsl(349, 70%, 56%);
 }
 
-.btn-paper img, .btn-scissors img {
+.btn-paper img, .btn-scissors img, .btn-rock img {
     width: 45%;
     height: 55%;
 }

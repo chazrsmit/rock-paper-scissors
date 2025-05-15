@@ -6,7 +6,7 @@ export default function Score({score}) {
         <div className="div-score">
 
             <div className="score-logo">
-                <img src={logo} alt="" srcset="" />
+                <img src={logo} alt="" />
             </div>
 
             <div className="score-points">
