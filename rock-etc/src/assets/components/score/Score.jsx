@@ -1,7 +1,7 @@
 import './score.css'
 import logo from '../../../rock-paper-scissors-master/images/logo.svg'
 
-export default function Score() {
+export default function Score({score}) {
     return(
         <div className="div-score">
 
@@ -10,8 +10,12 @@ export default function Score() {
             </div>
 
             <div className="score-points">
-                <p>SCORE</p>
-                <div className="points">{}</div>
+                <div className="score-p1">
+                    <p>SCORE</p>
+                </div>
+                <div className="score-p2">
+                    <p>{score}</p>
+                </div>
             </div>
         </div>
     )
