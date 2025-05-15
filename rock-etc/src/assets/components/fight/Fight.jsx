@@ -46,7 +46,12 @@ export default function Fight({ ident }) {
                 </div>
 
                 {isLoading && (
-                    <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                    <div className="lds-ellipsis">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        {/* <div></div> */}
+                    </div>
                 )}
 
                 <div className="house-choice d-flex flex-column gap-5 align-items-center">
