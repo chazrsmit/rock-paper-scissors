@@ -12,20 +12,20 @@ function App() {
   const [inFight, isInFight] = useState(false)
 
   // Variable correspondant au choix du joueur :
-  const [ident, setIdent] = useState()
+  const [ident, setIdent] = useState("")
 
   // Variable corresondant au choix aléatoire de l'ordinateur :
-  const [random, setRandom] = useState()
+  const [random, setRandom] = useState("")
 
   // Comptage des win pour le score :
-  let win = () => {
-    setScore((score) => score + 1)
-  }
+  // let win = () => {
+  //   setScore((score) => score + 1)
+  // }
 
   // Comptage des défaites pour le score :
-  let lose = () => {
-    setScore((score) => score - 1)
-  }
+  // let lose = () => {
+  //   setScore((score) => score - 1)
+  // }
 
   // Fonction qui s'enclenche lorsque l'on clique sur un des btn pour jouer :
   let play = (e) => {
@@ -53,7 +53,7 @@ function App() {
       )}
 
       {(inFight) && (
-        <Fight ident={ident} random={random} inFight={inFight} setRandom={setRandom} />
+        <Fight ident={ident} random={random} inFight={inFight} setRandom={setRandom} score={score} setScore={setScore} />
       )}
 
     </>

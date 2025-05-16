@@ -4,29 +4,56 @@ import scissors from '../../../rock-paper-scissors-master/images/icon-scissors.s
 import rock from '../../../rock-paper-scissors-master/images/icon-rock.svg'
 import React, { useEffect, useState } from "react";
 
-export default function Fight({ ident, random, inFight, setRandom }) {
+export default function Fight({ ident, random, inFight, setRandom, score, setScore }) {
 
     const [isLoading, setIsLoading] = useState(true)
-    // pour l'utilisation d'un settimeout, obligation d'utiliser un useeffect (en effet, en le mettant dans le return, ça peut créer des bugs.)
+    // Pour l'utilisation d'un setTimeOut, obligation d'utiliser un useEffect (en effet, en le mettant dans le return, ça peut créer des bugs.)
     useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 4000);
 
-    // Cleanup in case the component unmounts before timeout
-    return () => clearTimeout(timer);
-    }, []); // Run only once when the component mounts
-
+    // Arrêter l'effet de chargement après 4sec grâce à ce switch on/off (true/false).
+    setIsLoading(false);
+    
     // Une fois qu'un combat est lancé, on va générer un random number correspondant à l'un des 3 choix possibles (0: paper, 1: scissors, 2: rock).
-    useEffect(() => {
-    const timer2 = setTimeout(() => {
-        if (inFight === true) {
-        setRandom(random = Math.floor(Math.random()*2))
+    if (inFight === true) {
+        setRandom(random = Math.floor(Math.random()*3))
         console.log(random)
+    }
+
+    // Calcul des points suite au résultat du combat :
+    // On le met dans le setTimeOut pour éviter des bugs.
+    if (ident === "paper") {
+        if (random === 0) {
+            console.log("draw")
         }
-    }, 4000);
-    return () => clearTimeout(timer2);
-    }, []);
+        else if (random === 1) {
+            console.log("you lose")
+            setScore(score = score - 1)
+        }
+        else {
+            console.log("you win")
+            setScore(score = score + 1)
+        }
+    }
+
+    if (ident === "scissors") {
+        if (random === 0) {
+            console.log("you win")
+            setScore(score = score + 1)
+        }
+        else if (random === 1) {
+            console.log("draw")
+        }
+        else {
+            console.log("you lose")
+            setScore(score = score - 1)
+        }
+    }
+
+    }, 3000);
+    // Cleanup (recommandé)
+    return () => clearTimeout(timer);
+    }, []); 
 
     return(
 
@@ -64,7 +91,7 @@ export default function Fight({ ident, random, inFight, setRandom }) {
 
                 </div>
 
-                {/* Chargement/loading (disparait après 4sec grâce au setTimeout plus haut) */}
+                {/* Chargement/loading (disparait après 3sec grâce au setTimeout plus haut) */}
 
                 {isLoading && (
                     <div className="lds-ellipsis">
@@ -80,13 +107,13 @@ export default function Fight({ ident, random, inFight, setRandom }) {
                         <p className="text-white">THE HOUSE PICKED</p>
                     </div>
 
-                    {/* Disparait après 4sec grâce au setTimeOut */}
+                    {/* Disparait après 3sec grâce au setTimeOut */}
                     {isLoading &&
                     <div className="empty-choice">
                     </div>
                     }
 
-                    {/* Apparition après 4sec grâce à un set time out */}
+                    {/* Apparition après 3sec grâce à un set time out */}
                     {random === 0 &&
                         <div id="paper" className="wrap-paper bis">
                             <div className="btn-paper bis">
