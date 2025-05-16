@@ -11,7 +11,11 @@ function App() {
   // On crée une variable d'état pour déterminer si on est en mode combat ou pas :
   const [inFight, isInFight] = useState(false)
 
+  // Variable correspondant au choix du joueur :
   const [ident, setIdent] = useState()
+
+  // Variable corresondant au choix aléatoire de l'ordinateur :
+  const [random, setRandom] = useState()
 
   // Comptage des win pour le score :
   let win = () => {
@@ -25,9 +29,11 @@ function App() {
 
   // Fonction qui s'enclenche lorsque l'on clique sur un des btn pour jouer :
   let play = (e) => {
+
     if (!inFight) {
       isInFight(true)
 
+      // Lorsque le joueur va cliquer sur l'un des boutons, on va changer l'état de la variable ident qui, via l'id du bouton, va stocker le choix du joueur.
       setIdent(e.target.id)
 
       console.log("en combat")
@@ -47,7 +53,7 @@ function App() {
       )}
 
       {(inFight) && (
-        <Fight ident={ident} />
+        <Fight ident={ident} random={random} inFight={inFight} setRandom={setRandom} />
       )}
 
     </>
