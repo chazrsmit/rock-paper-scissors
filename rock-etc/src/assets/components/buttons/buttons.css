@@ -41,6 +41,7 @@
     align-items: center;
     border-radius: 50%;
     border-top: inset 7px rgba(255, 255, 255, 0.471);
+    cursor: pointer;
 }
 
 @media (min-width: 1024px) {
@@ -70,6 +71,7 @@
     align-items: center;
     border-radius: 50%;
     border-bottom: outset 7px hsl(230, 89%, 65%);
+    cursor: pointer;
 }
 
 .wrap-scissors {
@@ -81,6 +83,7 @@
     align-items: center;
     border-radius: 50%;
     border-bottom: outset 7px hsl(40, 84%, 53%);
+    cursor: pointer;
 }
 
 .wrap-rock {
@@ -92,6 +95,7 @@
     align-items: center;
     border-radius: 50%;
     border-bottom: outset 7px hsl(349, 70%, 56%);
+    cursor: pointer;
 }
 
 

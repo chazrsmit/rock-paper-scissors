@@ -56,11 +56,13 @@
 .wrap-paper.bis, .wrap-scissors.bis, .wrap-rock.bis {
   height: 140px;
   width: 140px;
+  cursor: auto;
 }
 
 .btn-paper.bis, .btn-scissors.bis, .btn-rock.bis {
   height: 105px;
   width: 105px;
+  cursor: auto;
 }
 
 .wrap-paper.bis.anim, .wrap-scissors.bis.anim, .wrap-rock.bis.anim {

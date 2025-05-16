@@ -222,7 +222,7 @@ export default function Fight({ ident, random, inFight, setRandom, score, setSco
                     }
 
                     {!isLoading && 
-                        <button onClick={replay}>Play again?</button>
+                        <button className="animBtn" onClick={replay}>Play again?</button>
                     }
 
                 </div>
