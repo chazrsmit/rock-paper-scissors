@@ -231,4 +231,6 @@
 .animBtn:hover {
   animation: none;
   transition: all 0.2s;
+  background-color: hsl(349, 71%, 52%);
+  color: white;
 }
