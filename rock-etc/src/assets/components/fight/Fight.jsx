@@ -9,7 +9,7 @@ export default function Fight({ ident, random, inFight, setRandom, score, setSco
     // Pour gérer la "barre" de chargement
     const [isLoading, setIsLoading] = useState(true)
 
-    // Pour afficher le message "You win / You lose"
+    // Pour afficher le message "You win / You lose" et pour les anims en cas de victoire ou défaite
     const [result, setResult] = useState("")
 
     // Pour l'utilisation d'un setTimeOut, obligation d'utiliser un useEffect (en effet, en le mettant dans le return, ça peut créer des bugs.)
@@ -97,7 +97,7 @@ export default function Fight({ ident, random, inFight, setRandom, score, setSco
                     </div>
 
                     {ident === "paper" && 
-                        <div id="paper" className="wrap-paper bis">
+                        <div id="paper" className={`wrap-paper bis ${result === "win" ? "anim" : ""}`}>
                             <div className="btn-paper bis">
                                 <img src={paper} alt="" />
                             </div>
@@ -105,7 +105,7 @@ export default function Fight({ ident, random, inFight, setRandom, score, setSco
                     }
 
                     {ident === "scissors" && 
-                        <div id="scissors" className="wrap-scissors bis">
+                        <div id="scissors" className={`wrap-scissors bis ${result === "win" ? "anim" : ""}`}>
                             <div id="scissors" className="btn-scissors bis">
                                 <img id="scissors" src={scissors} alt="" />
                             </div>
@@ -113,7 +113,7 @@ export default function Fight({ ident, random, inFight, setRandom, score, setSco
                     }
 
                     {ident === "rock" && 
-                        <div id="rock" className="wrap-rock bis">
+                        <div id="rock" className={`wrap-rock bis ${result === "win" ? "anim" : ""}`}>
                             <div id="rock" className="btn-rock bis">
                                 <img id="rock" src={rock} alt="" />
                             </div>
@@ -170,14 +170,14 @@ export default function Fight({ ident, random, inFight, setRandom, score, setSco
 
                     {/* Apparition après 3sec grâce à un set time out */}
                     {random === 0 &&
-                        <div id="paper" className="wrap-paper bis">
+                        <div id="paper" className={`wrap-paper bis ${result === "lose" ? "anim" : ""}`}>
                             <div className="btn-paper bis">
                                 <img src={paper} alt="" />
                             </div>
                         </div>
                     }
                     {random === 1 &&
-                        <div id="scissors" className="wrap-scissors bis">
+                        <div id="scissors" className={`wrap-scissors bis ${result === "lose" ? "anim" : ""}`}>
                             <div id="scissors" className="btn-scissors bis">
                                 <img id="scissors" src={scissors} alt="" />
                             </div>
@@ -185,7 +185,7 @@ export default function Fight({ ident, random, inFight, setRandom, score, setSco
                     }
 
                     {random === 2 &&
-                        <div id="rock" className="wrap-rock bis">
+                        <div id="rock" className={`wrap-rock bis ${result === "lose" ? "anim" : ""}`}>
                             <div id="rock" className="btn-rock bis">
                                 <img id="rock" src={rock} alt="" />
                             </div>
