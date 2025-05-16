@@ -4,7 +4,8 @@ import Score from './assets/components/score/Score'
 import Buttons from './assets/components/buttons/Buttons'
 import Fight from './assets/components/fight/Fight'
 import Modal from './assets/components/modal/Modal'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
+// On peut aisément ajouter des aimation via Framer Motion / Motion for React. Pour cela, on ajoute dans le return un motion component (écrit <motion.div>).
 
 
 function App() {
@@ -59,9 +60,9 @@ function App() {
       {(!inFight) && (
           <motion.div
             key="buttons"
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: 50 }}
+            exit={{ opacity: 0, x: 30 }}
             transition={{ duration: 0.3 }}
             >
             <Buttons play={play} />
@@ -71,9 +72,9 @@ function App() {
       {(inFight) && (
           <motion.div
             key="fight"
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
+            exit={{ opacity: 0, x: -30 }}
             transition={{ duration: 0.3 }}
           >
             <Fight ident={ident} random={random} inFight={inFight} setRandom={setRandom} score={score} setScore={setScore} replay={replay} />

@@ -42,7 +42,6 @@ p {
     /* margin-top: 8rem; */
     bottom: 0px;
     right: 50%;
-    margin-bottom: 1.8rem;
     transform: translateX(50%);
     position: absolute;
 }
