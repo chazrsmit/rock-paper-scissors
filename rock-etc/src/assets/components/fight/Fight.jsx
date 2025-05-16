@@ -123,7 +123,7 @@ export default function Fight({ ident, random, inFight, setRandom, score, setSco
 
                 {/* Sur ordis */}    
                 
-                <div className="div-milieu col-3">
+                <div className="div-milieu col-2">
 
                     {isLoading && (
                         <div className="lds-ellipsis">
