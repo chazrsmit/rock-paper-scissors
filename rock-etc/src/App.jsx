@@ -58,7 +58,9 @@ function App() {
 
   return (
     <>
-      <Score score={score} />
+      <div className="wrap-score">
+        <Score score={score} />
+      </div>
 
       {(!inFight) && (
         <Buttons play={play} />
