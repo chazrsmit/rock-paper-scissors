@@ -7,9 +7,10 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center !important;
+    justify-content: space-between;
     font-family: "Barlow Semi Condensed";
-    padding: 3rem;
+    padding-top: 3rem;
 }
 
 p {
@@ -17,7 +18,17 @@ p {
     margin: 0;
 }
 
-.wrap-score {
+.wrap-score{
     display: flex;
     justify-content: center;
+}
+
+.wrap-modal {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    margin-bottom: 5vh;
+    margin-right: 4vh;
 }

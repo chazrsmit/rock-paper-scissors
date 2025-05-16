@@ -62,6 +62,8 @@ function App() {
         <Score score={score} />
       </div>
 
+      <div className="wrap-btns">
+
       {(!inFight) && (
         <Buttons play={play} />
       )}
@@ -69,6 +71,12 @@ function App() {
       {(inFight) && (
         <Fight ident={ident} random={random} inFight={inFight} setRandom={setRandom} score={score} setScore={setScore} replay={replay} />
       )}
+
+      </div>
+
+      <div className="wrap-modal border">
+        <button>Rules</button>
+      </div>
 
     </>
   )

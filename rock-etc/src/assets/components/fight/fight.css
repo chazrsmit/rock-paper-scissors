@@ -1,7 +1,7 @@
 .div-fight {
   width: 90vw;
   display: flex;
-  margin-top: 4em;
+  margin-top: 6em;
   align-items: center;
   justify-content: space-around;
 }
@@ -9,7 +9,7 @@
 @media (min-width: 1024px) {
   .div-fight {
       width: 60vw !important;
-      border: 1px solid red;
+      margin-top: 9.5em;
   }
 }
 
@@ -27,31 +27,36 @@
   font-size: clamp(14px, 2.5vw, 20px);
 }
 
+.title-choice p {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 @media (min-width: 1024px) {
   .wrap-paper.bis, .wrap-scissors.bis, .wrap-rock.bis {
-    height: 200px;
-    width: 200px;
+    height: 200px !important;
+    width: 200px !important;
   }
 
   .btn-paper.bis, .btn-scissors.bis, .btn-rock.bis {
-    height: 155px;
-    width: 155px;
+    height: 155px !important;
+    width: 155px !important;
   }
 }
 
 .wrap-paper.bis, .wrap-scissors.bis, .wrap-rock.bis {
-  height: 150px;
-  width: 150px;
+  height: 140px;
+  width: 140px;
 }
 
 .btn-paper.bis, .btn-scissors.bis, .btn-rock.bis {
-  height: 115px;
-  width: 115px;
+  height: 105px;
+  width: 105px;
 }
 
 .empty-choice {
-  height: 160px;
-  width: 160px;
+  height: 140px;
+  width: 140px;
   background-color: rgba(0, 0, 0, 0.119);
   border-radius: 50%;
 }
