@@ -10,7 +10,7 @@ export default function Modal() {
 <div className="wrap-modal">
     <button
         type="button"
-        className="btn btn-primary"
+        className="btn-modal"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
     >
@@ -44,7 +44,7 @@ export default function Modal() {
                     <img id="img1" src={rules} alt="" />
                 </div>
 
-                <div className="modal-footer border-0 justify-content-center"></div>
+                <div className="modal-footer">
                     <button
                     type="button"
                     className="btn-close second"
@@ -52,7 +52,7 @@ export default function Modal() {
                     aria-label="Close"
                     />
                 </div>
-
+            </div>
             </div>
         </div>
     </>

@@ -64,9 +64,7 @@ function App() {
 
       </div>
 
-      {/* <div className="wrap-modal"> */}
-        <Modal />
-      {/* </div> */}
+      <Modal />
 
     </>
   )

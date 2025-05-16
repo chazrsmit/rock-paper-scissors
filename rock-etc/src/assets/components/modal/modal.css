@@ -1,3 +1,18 @@
+.btn-modal {
+    text-transform: uppercase;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.667);
+    color: white;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
 .modal-dialog-centered {
     justify-content: center;
     /* margin: auto; */
@@ -17,10 +32,36 @@
 
 .modal-body {
     overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-close.first {
     display:none;
+}
+
+.modal-header {
+    justify-content: center
+}
+
+
+#img1 {
+  max-width: 100%;
+  height: auto;
+}
+
+.modal-footer {
+  display: flex;            /* make footer a flex container */
+  justify-content: center;  /* center content horizontally */
+  border-top: none;         /* optional: remove top border */
+  padding: 1rem;            /* keep some padding */
+}
+
+.modal-footer button {
+    border: 1px solid hsl(229, 25%, 31%);
+    width: 40px;
+    height: 40px;
 }
 
 @media (min-width:1024px) {
@@ -40,6 +81,10 @@
 
     .btn-close.first {
         display:flex;
+    }
+
+    .modal-footer {
+        display: none;
     }
 }
 
