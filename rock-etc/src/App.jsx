@@ -3,7 +3,7 @@ import './App.css'
 import Score from './assets/components/score/Score'
 import Buttons from './assets/components/buttons/Buttons'
 import Fight from './assets/components/fight/Fight'
-
+import Modal from './assets/components/modal/Modal'
 
 function App() {
   const [score, setScore] = useState(0)
@@ -16,16 +16,6 @@ function App() {
 
   // Variable corresondant au choix aléatoire de l'ordinateur :
   const [random, setRandom] = useState("")
-
-  // Comptage des win pour le score :
-  // let win = () => {
-  //   setScore((score) => score + 1)
-  // }
-
-  // Comptage des défaites pour le score :
-  // let lose = () => {
-  //   setScore((score) => score - 1)
-  // }
 
   // Fonction qui s'enclenche lorsque l'on clique sur un des btn pour jouer :
   let play = (e) => {
@@ -74,9 +64,9 @@ function App() {
 
       </div>
 
-      <div className="wrap-modal border">
-        <button>Rules</button>
-      </div>
+      {/* <div className="wrap-modal"> */}
+        <Modal />
+      {/* </div> */}
 
     </>
   )

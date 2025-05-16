@@ -11,6 +11,7 @@ body {
     justify-content: space-between;
     font-family: "Barlow Semi Condensed";
     padding-top: 3rem;
+    box-sizing: border-box;
 }
 
 p {
@@ -23,12 +24,24 @@ p {
     justify-content: center;
 }
 
-.wrap-modal {
-    display: flex;
+@media (min-width: 1024px) {
+    .wrap-modal {
+    /* display: flex !important; */
     justify-content: end;
+    position: absolute !important;
+    right: 0px !important;
+    bottom: 0px !important;
+    margin-right: 3vh;
+    margin-bottom: 3vh;
+    transform: none !important;
+    }
+}
+
+.wrap-modal {
+    /* display: flex;
+    justify-content: center; */
+    margin-top: 8rem;
+    right: 50%;
+    transform: translateX(50%);
     position: absolute;
-    right: 0px;
-    bottom: 0px;
-    margin-bottom: 5vh;
-    margin-right: 4vh;
 }

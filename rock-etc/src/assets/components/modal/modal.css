@@ -1,0 +1,51 @@
+.modal-dialog-centered {
+    justify-content: center;
+    /* margin: auto; */
+}
+
+.modal-dialog {
+    width: 100vw;
+    max-width: 100vw;
+    /* changer la max-width, car en général sur bootstrap il y a déjà une valeur par défaut ce qui empêchait de changer en fullscreen */
+    height: 100vh;
+    margin: 0;
+}
+
+.modal-content {
+    height: 100vh;
+}
+
+.modal-body {
+    overflow-y: auto;
+}
+
+.btn-close.first {
+    display:none;
+}
+
+@media (min-width:1024px) {
+    .modal-content {
+        width: 30vw !important;
+        height: 30vw !important;
+        padding: 1.4rem;
+    }
+    .modal-body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .btn-close.second {
+        display: none;
+    }
+
+    .btn-close.first {
+        display:flex;
+    }
+}
+
+.modal-title {
+    color:  hsl(229, 25%, 31%);
+    text-transform: uppercase;
+    font-size: 28px !important;
+    font-weight: 600;
+}

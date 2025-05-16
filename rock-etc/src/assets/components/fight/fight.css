@@ -8,8 +8,9 @@
 
 @media (min-width: 1024px) {
   .div-fight {
-      width: 60vw !important;
+      width: 50vw !important;
       margin-top: 8em;
+      justify-content: space-between;
   }
 }
 
@@ -67,7 +68,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    /* gap: 5px; */
 
   }
 
