@@ -4,6 +4,8 @@ import Score from './assets/components/score/Score'
 import Buttons from './assets/components/buttons/Buttons'
 import Fight from './assets/components/fight/Fight'
 import Modal from './assets/components/modal/Modal'
+import { AnimatePresence, motion } from 'framer-motion'
+
 
 function App() {
   const [score, setScore] = useState(0)
@@ -55,11 +57,27 @@ function App() {
       <div className="wrap-btns">
 
       {(!inFight) && (
-        <Buttons play={play} />
+          <motion.div
+            key="buttons"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: 50 }}
+            transition={{ duration: 0.3 }}
+            >
+            <Buttons play={play} />
+          </motion.div>
       )}
 
       {(inFight) && (
-        <Fight ident={ident} random={random} inFight={inFight} setRandom={setRandom} score={score} setScore={setScore} replay={replay} />
+          <motion.div
+            key="fight"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -50 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Fight ident={ident} random={random} inFight={inFight} setRandom={setRandom} score={score} setScore={setScore} replay={replay} />
+          </motion.div>
       )}
 
       </div>
