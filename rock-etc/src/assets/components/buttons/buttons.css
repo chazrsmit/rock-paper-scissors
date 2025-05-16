@@ -40,6 +40,7 @@
     border-top: inset 7px rgba(255, 255, 255, 0.471);
 }
 
+
 .wrap-paper {
     background: linear-gradient(to top, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
     width: 165px;
@@ -72,6 +73,7 @@
     border-radius: 50%;
     border-bottom: outset 7px hsl(349, 70%, 56%);
 }
+
 
 .btn-paper img, .btn-scissors img, .btn-rock img {
     width: 45%;

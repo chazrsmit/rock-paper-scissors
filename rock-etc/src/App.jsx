@@ -44,6 +44,18 @@ function App() {
     }
   }
 
+  // Fonction pour rejouer :
+
+  let replay = () => {
+
+    if (inFight) {
+      isInFight(false)
+    }
+
+    setRandom()
+
+  }
+
   return (
     <>
       <Score score={score} />
@@ -53,7 +65,7 @@ function App() {
       )}
 
       {(inFight) && (
-        <Fight ident={ident} random={random} inFight={inFight} setRandom={setRandom} score={score} setScore={setScore} />
+        <Fight ident={ident} random={random} inFight={inFight} setRandom={setRandom} score={score} setScore={setScore} replay={replay} />
       )}
 
     </>
