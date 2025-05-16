@@ -6,11 +6,19 @@
   justify-content: space-around;
 }
 
+.player-choice, .house-choice {
+  flex-direction: column-reverse;
+}
+
 @media (min-width: 1024px) {
   .div-fight {
       width: 50vw !important;
       margin-top: 8em;
       justify-content: space-between;
+  }
+
+  .player-choice, .house-choice {
+    flex-direction: column;
   }
 }
 
