@@ -15,13 +15,12 @@
 
 .modal-dialog-centered {
     justify-content: center;
-    /* margin: auto; */
 }
 
 .modal-dialog {
     width: 100vw;
     max-width: 100vw;
-    /* changer la max-width, car en général sur bootstrap il y a déjà une valeur par défaut ce qui empêchait de changer en fullscreen */
+    /* Changer la max-width, car en général sur bootstrap il y a déjà une valeur par défaut ce qui empêchait de changer en fullscreen */
     height: 100vh;
     margin: 0;
 }
@@ -47,15 +46,15 @@
 
 
 #img1 {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .modal-footer {
-  display: flex;            /* make footer a flex container */
-  justify-content: center;  /* center content horizontally */
-  border-top: none;         /* optional: remove top border */
-  padding: 1rem;            /* keep some padding */
+    display: flex;
+    justify-content: center; 
+    border-top: none;
+    padding: 1rem;
 }
 
 .modal-footer button {

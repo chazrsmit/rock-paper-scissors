@@ -12,9 +12,9 @@
 
 @media (min-width: 1024px) {
   .div-fight {
-      width: 50vw !important;
-      margin-top: 8em;
-      justify-content: space-between;
+    width: 50vw !important;
+    margin-top: 8em;
+    justify-content: space-between;
   }
 
   .player-choice, .house-choice {
@@ -70,18 +70,18 @@
 
 @keyframes pulse {
     0% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 hsl(217, 16%, 45%);
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 hsl(217, 16%, 45%);
     }
 
     70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+      transform: scale(1);
+      box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
     }
 
     100% {
-        transform: scale(0.95);
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(0, 0, 0, 0)
     }
 }
 
@@ -96,15 +96,15 @@
 
 @keyframes waiting {
     0% {
-        transform: scale(0.9);
+      transform: scale(0.9);
     }
 
     70% {
-        transform: scale(1);
+      transform: scale(1);
     }
 
     100% {
-        transform: scale(0.9);
+      transform: scale(0.9);
     }
 }
 
@@ -124,19 +124,6 @@
     height: 200px;
     width: 200px;
   }
-
-  /* .div-milieu h4 {
-    letter-spacing: 1px;
-    color: white;
-    font-size: 40px !important;
-    font-weight: bold;
-
-  } */
-
-  /* .div-milieu button {
-    border: none;
-    width: 100%;
-  } */
 
   .div-milieu2 {
     display: none !important;
@@ -194,8 +181,6 @@
   align-items: flex-end;
   gap: 8px;
   height: 80px;
-  /* width: 100px;
-  border: 1px solid green; */
 }
 
 .lds-ellipsis div {
