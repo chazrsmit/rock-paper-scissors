@@ -32,7 +32,6 @@ p {
     right: 0px !important;
     bottom: 0px !important;
     margin-right: 3vh;
-    margin-bottom: 3vh;
     transform: none !important;
     }
 }
@@ -40,8 +39,10 @@ p {
 .wrap-modal {
     /* display: flex;
     justify-content: center; */
-    margin-top: 8rem;
+    /* margin-top: 8rem; */
+    bottom: 0px;
     right: 50%;
+    margin-bottom: 1.8rem;
     transform: translateX(50%);
     position: absolute;
 }

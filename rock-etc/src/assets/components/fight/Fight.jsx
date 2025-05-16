@@ -91,7 +91,7 @@ export default function Fight({ ident, random, inFight, setRandom, score, setSco
         <>
             <div className="div-fight">
 
-                <div className="player-choice d-flex flex-column gap-3 align-items-center col-6 col-md-4">
+                <div className="player-choice d-flex flex-column gap-4 align-items-center col-6 col-md-4">
                     <div className="title-choice">
                         <p className="text-white">YOU PICKED</p>
                     </div>
@@ -157,7 +157,7 @@ export default function Fight({ ident, random, inFight, setRandom, score, setSco
                 </div>
 
 
-                <div className="house-choice d-flex flex-column gap-3 align-items-center  col-6 col-md-4">
+                <div className="house-choice d-flex flex-column gap-4 align-items-center  col-6 col-md-4">
                     <div className="title-choice">
                         <p className="text-white">THE HOUSE PICKED</p>
                     </div>
