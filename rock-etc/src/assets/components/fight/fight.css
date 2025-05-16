@@ -9,7 +9,7 @@
 @media (min-width: 1024px) {
   .div-fight {
       width: 60vw !important;
-      margin-top: 9.5em;
+      margin-top: 8em;
   }
 }
 
@@ -111,7 +111,7 @@
 }
 
 .div-milieu2 h4, .div-milieu h4 {
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   color: white;
   font-size: clamp(28px, 5vw, 42px);
   font-weight: 600;
@@ -119,7 +119,7 @@
 
 .div-milieu2 button, .div-milieu button {
   border: none;
-  width: 100%;
+  width: 70%;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 8px;
